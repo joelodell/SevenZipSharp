@@ -1107,6 +1107,7 @@ namespace SevenZip
         /// <param name="e">The event arguments.</param>
         private void CompressingEventProxy(object sender, ProgressEventArgs e)
         {
+            e.SourceRequest = SourceRequest;
             OnEvent(Compressing, e, false);
         }
 
@@ -1784,7 +1785,7 @@ namespace SevenZip
         }
 
         /// <summary>
-        /// 
+        /// Provide next source stream
         /// </summary>
         /// <param name="sender">This instance</param>
         /// <param name="e">Event args</param>

@@ -63,7 +63,7 @@ namespace SevenZip
         /// </summary>
         private Stream[] _streams;
 
-        public StreamInfo[] _streamInfos;
+        private StreamInfo[] _streamInfos;
 
         private UpdateData _updateData;
         private List<InStreamWrapper> _wrappersToDispose;
@@ -711,6 +711,7 @@ namespace SevenZip
             {
                 Stream s = ProvideNextSourceStream.Invoke(this, new NewSourceStreamEventArgs(index));
                 _fileStream = new InStreamWrapper(s, true);
+                _fileStream.BytesRead += IntEventArgsHandler;
                 inStream = _fileStream;
             }
             else
