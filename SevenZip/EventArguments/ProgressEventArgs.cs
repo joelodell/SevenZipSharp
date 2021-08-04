@@ -1,4 +1,6 @@
-﻿namespace SevenZip
+﻿using System;
+
+namespace SevenZip
 {
     /// <summary>
     /// The EventArgs class for accurate progress handling.
@@ -6,6 +8,8 @@
     public sealed class ProgressEventArgs : PercentDoneEventArgs
     {
         private readonly byte _delta;
+
+        public Object SourceRequest;
 
         /// <summary>
         /// Initializes a new instance of the ProgressEventArgs class.
