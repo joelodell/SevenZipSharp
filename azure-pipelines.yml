@@ -37,7 +37,7 @@ steps:
   displayName: 'Nuget Package SevenZip'
   inputs:
     command: 'pack'
-    packagesToPack: '**/lens.nuspec'
+    packagesToPack: '$(workingDirectory)/lens.nuspec'
     packDestination: $(Build.ArtifactStagingDirectory)
     versioningScheme: 'byPrereleaseNumber'
     configuration: Release
