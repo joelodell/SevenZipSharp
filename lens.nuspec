@@ -16,14 +16,14 @@
 		<dependencies>
 			<group targetFramework="net45" />
 			<group targetFramework="netcoreapp3.1">
-				<dependency id="System.Configuration.ConfigurationManager" version="5.0.0" />
-				<dependency id="System.Security.Permissions" version="5.0.0" />
+				<dependency id="System.Configuration.ConfigurationManager" version="6.0.0-preview.1.21102.12" />
+				<dependency id="System.Security.Permissions" version="6.0.0-preview.7.21377.19" />
 			</group>
 		</dependencies>
 	</metadata>
 	<files>
 		<file src="Stage\Release\netcoreapp3.1\SevenZipSharp.dll" target="lib\netcoreapp3.1" />
-		<file src="Stage\Release\net45\SevenZipSharp.dll" target="lib\net45" />
+		<file src="Stage\Release\net461\SevenZipSharp.dll" target="lib\net461" />
 		<file src="license" />
 	</files>
 </package>
